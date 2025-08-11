@@ -1,0 +1,41 @@
+{
+  "files.associations": {
+    "*.json": "jsonc"
+  },
+  // 核心功能：开启“保存时自动格式化”
+  "editor.formatOnSave": true,
+
+  // 核心功能：设置所有文件的“默认格式化工具”为 Prettier 官方插件
+  // "esbenp.prettier-vscode" 是 "Prettier - Code formatter" 插件的唯一标识符
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  // 核心功能：在保存文件时，自动运行 ESLint 的修复命令
+  // "explicit" 是推荐的设置，表示明确执行 ESLint 的修复操作
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+
+  // 告诉 VSCode 的 ESLint 插件，需要对哪些语言启用检查
+  "eslint.validate": [
+    "javascript",
+    "typescript",
+    "vue"
+  ],
+
+  // (可选，但推荐) 为不同语言明确指定格式化工具，避免与其他可能安装的格式化插件冲突
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}
