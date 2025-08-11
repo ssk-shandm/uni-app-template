@@ -157,10 +157,10 @@ export const showToast = (
     "bigPackageSizeSupport": true,
     "compileHotReLoad": true
   },
-  "compileType": "miniprogram",
+  "compileType": " ",
   "libVersion": "3.9.0",
-  "appid": "wx5f2a61945b8c66e7",
-  "projectname": "uni-DIY",
+  "appid": " ",
+  "projectname": " ",
   "cloudfunctionRoot": "cloudfunctions/",
   "condition": {}
   }
