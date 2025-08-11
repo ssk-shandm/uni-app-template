@@ -135,53 +135,8 @@ export const showToast = (
 详细编写方法可以参考[TSDoc官方文档](https://tsdoc.org/)。
 
 ## 🔑微信小程序相关配置
-- #### 如果是要创建微信小程序云函数：
-  1.**创建文件夹:** 创建与src文件夹平级的wxclode/cloudfunctions文件夹，云函数存放在该位置
-  2.**配置tsconfig.json: ** 添加 ``` "types": ["@dcloudio/types","wechat-miniprogram"]```
-
-  3.**配置project.config.json：**在与src文件夹平级位置创建project.config.json文件
-  
-  ```json
-  {
-  "description": "项目配置文件。",
-  "packOptions": {
-    "ignore": [],
-    "include": []
-  },
-  "setting": {
-    "urlCheck": false,
-    "es6": true,
-    "postcss": false,
-    "minified": false,
-    "newFeature": true,
-    "bigPackageSizeSupport": true,
-    "compileHotReLoad": true
-  },
-  "compileType": " ",
-  "libVersion": "3.9.0",
-  "appid": " ",
-  "projectname": " ",
-  "cloudfunctionRoot": "cloudfunctions/",
-  "condition": {}
-  }
-  ```
-  
-  4.**配置vite.congfig.ts:**  添加插件viteCp
-  
-  ```typescript
-  viteCp({
-    targets: [
-      {
-        src: 'wxcloud/cloudfunctions', 
-        dest: 'dist/dev/mp-weixin/cloudfunctions' 
-      },
-      {
-        src: 'project.config.json',
-        dest: 'dist/dev/mp-weixin',       
-      }
-    ]
-  })
-  ```
+- **云函数相关:** 目前推荐使用hbuilderx的阿里云(开发者免费)部署云函数
+- **数据相关：** 图片等数据上传到阿里云，微信云开发的'cloud://'改为阿里云的'https://'
   
   
   
